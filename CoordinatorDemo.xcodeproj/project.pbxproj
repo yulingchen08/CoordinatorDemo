@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		92285D562871DF0D00122F92 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92285D552871DF0D00122F92 /* AppCoordinator.swift */; };
+		92285D582871E6F700122F92 /* AppCoordinatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92285D572871E6F700122F92 /* AppCoordinatorModel.swift */; };
+		92285D5A2871E7D900122F92 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92285D592871E7D900122F92 /* Constants.swift */; };
+		92285D5D2871EA6B00122F92 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92285D5C2871EA6B00122F92 /* LoginViewController.swift */; };
+		92285D5F2871EA8C00122F92 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92285D5E2871EA8C00122F92 /* MainViewController.swift */; };
+		92285D612872801C00122F92 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92285D602872801C00122F92 /* LoginCoordinator.swift */; };
+		924194452872951500DC8938 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 924194442872951500DC8938 /* SnapKit */; };
+		924194472872990800DC8938 /* MainViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924194462872990800DC8938 /* MainViewCoordinator.swift */; };
+		924194492872BCE700DC8938 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924194482872BCE700DC8938 /* CameraViewController.swift */; };
+		9241944B2872BD9F00DC8938 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9241944A2872BD9F00DC8938 /* NotificationViewController.swift */; };
+		9241944D2872BDCC00DC8938 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9241944C2872BDCC00DC8938 /* SettingsViewController.swift */; };
+		9241944F2872C07300DC8938 /* CameraCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9241944E2872C07300DC8938 /* CameraCoordinator.swift */; };
+		924194512872C0C000DC8938 /* NotificationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924194502872C0C000DC8938 /* NotificationCoordinator.swift */; };
+		924194532872C14100DC8938 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924194522872C14100DC8938 /* SettingsCoordinator.swift */; };
 		927CD79028718C88005AAE11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927CD78F28718C88005AAE11 /* AppDelegate.swift */; };
 		927CD79228718C88005AAE11 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927CD79128718C88005AAE11 /* SceneDelegate.swift */; };
 		927CD79428718C88005AAE11 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927CD79328718C88005AAE11 /* ViewController.swift */; };
@@ -16,6 +30,14 @@
 		927CD7A728718C90005AAE11 /* CoordinatorDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927CD7A628718C90005AAE11 /* CoordinatorDemoTests.swift */; };
 		927CD7B128718C90005AAE11 /* CoordinatorDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927CD7B028718C90005AAE11 /* CoordinatorDemoUITests.swift */; };
 		927CD7B328718C90005AAE11 /* CoordinatorDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927CD7B228718C90005AAE11 /* CoordinatorDemoUITestsLaunchTests.swift */; };
+		927CD7C128718CB6005AAE11 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927CD7C028718CB6005AAE11 /* Coordinator.swift */; };
+		927CD7C328718F57005AAE11 /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927CD7C228718F57005AAE11 /* NavigationRouter.swift */; };
+		927CD7C52871DAF6005AAE11 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927CD7C42871DAF6005AAE11 /* BaseCoordinator.swift */; };
+		928C3D7B287423BB0079414B /* CameraDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928C3D7A287423BB0079414B /* CameraDetailCoordinator.swift */; };
+		928C3D7E287426AC0079414B /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928C3D7D287426AC0079414B /* Camera.swift */; };
+		928C3D81287428170079414B /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928C3D80287428170079414B /* CameraViewModel.swift */; };
+		928C3D832874341C0079414B /* CameraDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928C3D822874341C0079414B /* CameraDetailViewController.swift */; };
+		928C3D85287483620079414B /* LensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928C3D84287483620079414B /* LensViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +58,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		92285D552871DF0D00122F92 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		92285D572871E6F700122F92 /* AppCoordinatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorModel.swift; sourceTree = "<group>"; };
+		92285D592871E7D900122F92 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		92285D5C2871EA6B00122F92 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		92285D5E2871EA8C00122F92 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		92285D602872801C00122F92 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		924194462872990800DC8938 /* MainViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCoordinator.swift; sourceTree = "<group>"; };
+		924194482872BCE700DC8938 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		9241944A2872BD9F00DC8938 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		9241944C2872BDCC00DC8938 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		9241944E2872C07300DC8938 /* CameraCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraCoordinator.swift; sourceTree = "<group>"; };
+		924194502872C0C000DC8938 /* NotificationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCoordinator.swift; sourceTree = "<group>"; };
+		924194522872C14100DC8938 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
 		927CD78C28718C88005AAE11 /* CoordinatorDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoordinatorDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		927CD78F28718C88005AAE11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		927CD79128718C88005AAE11 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +84,14 @@
 		927CD7AC28718C90005AAE11 /* CoordinatorDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoordinatorDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		927CD7B028718C90005AAE11 /* CoordinatorDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorDemoUITests.swift; sourceTree = "<group>"; };
 		927CD7B228718C90005AAE11 /* CoordinatorDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		927CD7C028718CB6005AAE11 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		927CD7C228718F57005AAE11 /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
+		927CD7C42871DAF6005AAE11 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		928C3D7A287423BB0079414B /* CameraDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraDetailCoordinator.swift; sourceTree = "<group>"; };
+		928C3D7D287426AC0079414B /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		928C3D80287428170079414B /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
+		928C3D822874341C0079414B /* CameraDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraDetailViewController.swift; sourceTree = "<group>"; };
+		928C3D84287483620079414B /* LensViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LensViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				924194452872951500DC8938 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +120,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		92285D5B2871EA5C00122F92 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				92285D5C2871EA6B00122F92 /* LoginViewController.swift */,
+				92285D5E2871EA8C00122F92 /* MainViewController.swift */,
+				924194482872BCE700DC8938 /* CameraViewController.swift */,
+				9241944A2872BD9F00DC8938 /* NotificationViewController.swift */,
+				9241944C2872BDCC00DC8938 /* SettingsViewController.swift */,
+				928C3D822874341C0079414B /* CameraDetailViewController.swift */,
+				928C3D84287483620079414B /* LensViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		927CD78328718C88005AAE11 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +157,10 @@
 		927CD78E28718C88005AAE11 /* CoordinatorDemo */ = {
 			isa = PBXGroup;
 			children = (
+				928C3D7F287427FF0079414B /* ViewModels */,
+				928C3D7C2874264F0079414B /* Models */,
+				92285D5B2871EA5C00122F92 /* Views */,
+				927CD7BF28718C99005AAE11 /* Coordinators */,
 				927CD78F28718C88005AAE11 /* AppDelegate.swift */,
 				927CD79128718C88005AAE11 /* SceneDelegate.swift */,
 				927CD79328718C88005AAE11 /* ViewController.swift */,
@@ -106,6 +168,7 @@
 				927CD79828718C90005AAE11 /* Assets.xcassets */,
 				927CD79A28718C90005AAE11 /* LaunchScreen.storyboard */,
 				927CD79D28718C90005AAE11 /* Info.plist */,
+				92285D592871E7D900122F92 /* Constants.swift */,
 			);
 			path = CoordinatorDemo;
 			sourceTree = "<group>";
@@ -127,6 +190,40 @@
 			path = CoordinatorDemoUITests;
 			sourceTree = "<group>";
 		};
+		927CD7BF28718C99005AAE11 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				927CD7C028718CB6005AAE11 /* Coordinator.swift */,
+				927CD7C228718F57005AAE11 /* NavigationRouter.swift */,
+				927CD7C42871DAF6005AAE11 /* BaseCoordinator.swift */,
+				92285D552871DF0D00122F92 /* AppCoordinator.swift */,
+				92285D572871E6F700122F92 /* AppCoordinatorModel.swift */,
+				92285D602872801C00122F92 /* LoginCoordinator.swift */,
+				924194462872990800DC8938 /* MainViewCoordinator.swift */,
+				9241944E2872C07300DC8938 /* CameraCoordinator.swift */,
+				924194502872C0C000DC8938 /* NotificationCoordinator.swift */,
+				924194522872C14100DC8938 /* SettingsCoordinator.swift */,
+				928C3D7A287423BB0079414B /* CameraDetailCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		928C3D7C2874264F0079414B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				928C3D7D287426AC0079414B /* Camera.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		928C3D7F287427FF0079414B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				928C3D80287428170079414B /* CameraViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +240,9 @@
 			dependencies = (
 			);
 			name = CoordinatorDemo;
+			packageProductDependencies = (
+				924194442872951500DC8938 /* SnapKit */,
+			);
 			productName = CoordinatorDemo;
 			productReference = 927CD78C28718C88005AAE11 /* CoordinatorDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +315,9 @@
 				Base,
 			);
 			mainGroup = 927CD78328718C88005AAE11;
+			packageReferences = (
+				924194432872951500DC8938 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 927CD78D28718C88005AAE11 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,9 +361,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				928C3D7B287423BB0079414B /* CameraDetailCoordinator.swift in Sources */,
+				927CD7C128718CB6005AAE11 /* Coordinator.swift in Sources */,
+				924194512872C0C000DC8938 /* NotificationCoordinator.swift in Sources */,
+				92285D5F2871EA8C00122F92 /* MainViewController.swift in Sources */,
+				928C3D85287483620079414B /* LensViewController.swift in Sources */,
+				927CD7C52871DAF6005AAE11 /* BaseCoordinator.swift in Sources */,
+				928C3D7E287426AC0079414B /* Camera.swift in Sources */,
+				9241944F2872C07300DC8938 /* CameraCoordinator.swift in Sources */,
+				92285D582871E6F700122F92 /* AppCoordinatorModel.swift in Sources */,
+				924194472872990800DC8938 /* MainViewCoordinator.swift in Sources */,
+				9241944B2872BD9F00DC8938 /* NotificationViewController.swift in Sources */,
 				927CD79428718C88005AAE11 /* ViewController.swift in Sources */,
+				9241944D2872BDCC00DC8938 /* SettingsViewController.swift in Sources */,
 				927CD79028718C88005AAE11 /* AppDelegate.swift in Sources */,
+				92285D612872801C00122F92 /* LoginCoordinator.swift in Sources */,
+				924194532872C14100DC8938 /* SettingsCoordinator.swift in Sources */,
+				927CD7C328718F57005AAE11 /* NavigationRouter.swift in Sources */,
 				927CD79228718C88005AAE11 /* SceneDelegate.swift in Sources */,
+				928C3D81287428170079414B /* CameraViewModel.swift in Sources */,
+				928C3D832874341C0079414B /* CameraDetailViewController.swift in Sources */,
+				92285D562871DF0D00122F92 /* AppCoordinator.swift in Sources */,
+				924194492872BCE700DC8938 /* CameraViewController.swift in Sources */,
+				92285D5D2871EA6B00122F92 /* LoginViewController.swift in Sources */,
+				92285D5A2871E7D900122F92 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +569,8 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -473,6 +599,8 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -602,6 +730,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		924194432872951500DC8938 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		924194442872951500DC8938 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 924194432872951500DC8938 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 927CD78428718C88005AAE11 /* Project object */;
 }
