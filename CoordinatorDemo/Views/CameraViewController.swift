@@ -11,6 +11,8 @@ import SnapKit
 protocol CameraViewControllerDelegate: AnyObject {
     func didClickCamera(_ vc: CameraViewController, camera: Camera)
     func printCoordinator()
+    
+    func goToDSLR(_ vc: CameraViewController, option: DeepLinkOption)
 }
 
 enum Camera: Int {
@@ -102,6 +104,21 @@ class CameraViewController: UIViewController {
         return button
     }()
     
+    lazy var goDSLRButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("DSLR", for: .normal)
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor.tertiaryLabel.cgColor
+        button.backgroundColor = .systemBackground
+        button.setTitleColor(UIColor.black, for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+        button.layer.cornerRadius = 3
+        button.tag = 3
+        button.addTarget(self, action: #selector(selectCamera(_:)), for: .touchUpInside)
+        
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -116,7 +133,7 @@ class CameraViewController: UIViewController {
 extension CameraViewController {
     private func setupView() {
         view.backgroundColor = .white
-        let stackView = UIStackView(arrangedSubviews: [canonButton, nikonButton, sonyButton])
+        let stackView = UIStackView(arrangedSubviews: [canonButton, nikonButton, sonyButton, goDSLRButton])
         stackView.spacing = 20
         stackView.axis = .vertical
         stackView.distribution = .fillEqually
@@ -150,6 +167,8 @@ extension CameraViewController {
             delegate?.didClickCamera(self, camera: .nikon)
         case 2:
             delegate?.didClickCamera(self, camera: .sony)
+        case 3:
+            delegate?.goToDSLR(self, option: .canonDSLR)
         default:
             break
         }

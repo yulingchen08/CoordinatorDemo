@@ -38,6 +38,7 @@
 		928C3D81287428170079414B /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928C3D80287428170079414B /* CameraViewModel.swift */; };
 		928C3D832874341C0079414B /* CameraDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928C3D822874341C0079414B /* CameraDetailViewController.swift */; };
 		928C3D85287483620079414B /* LensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928C3D84287483620079414B /* LensViewController.swift */; };
+		92E92DC32875D58E00ACFB87 /* DeepLinkOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E92DC22875D58E00ACFB87 /* DeepLinkOption.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		928C3D80287428170079414B /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 		928C3D822874341C0079414B /* CameraDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraDetailViewController.swift; sourceTree = "<group>"; };
 		928C3D84287483620079414B /* LensViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LensViewController.swift; sourceTree = "<group>"; };
+		92E92DC22875D58E00ACFB87 /* DeepLinkOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkOption.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +206,7 @@
 				924194502872C0C000DC8938 /* NotificationCoordinator.swift */,
 				924194522872C14100DC8938 /* SettingsCoordinator.swift */,
 				928C3D7A287423BB0079414B /* CameraDetailCoordinator.swift */,
+				92E92DC22875D58E00ACFB87 /* DeepLinkOption.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 				9241944B2872BD9F00DC8938 /* NotificationViewController.swift in Sources */,
 				927CD79428718C88005AAE11 /* ViewController.swift in Sources */,
 				9241944D2872BDCC00DC8938 /* SettingsViewController.swift in Sources */,
+				92E92DC32875D58E00ACFB87 /* DeepLinkOption.swift in Sources */,
 				927CD79028718C88005AAE11 /* AppDelegate.swift in Sources */,
 				92285D612872801C00122F92 /* LoginCoordinator.swift in Sources */,
 				924194532872C14100DC8938 /* SettingsCoordinator.swift in Sources */,
