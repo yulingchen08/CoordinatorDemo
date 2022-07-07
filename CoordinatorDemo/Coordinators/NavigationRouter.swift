@@ -40,8 +40,18 @@ class NavigationRouter: NSObject {
 
 
 extension NavigationRouter: UINavigationControllerDelegate {
-    // TODO:
-//    func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
-//
-//    }
+    //每次navigationController有push或pop時，都會invoke
+    func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
+        print("[DEBUG][NavigationRouter] navigationController: \(viewController)")
+        //給.from，可以拿到navigation要pop哪個vc
+        //給.to，可以拿到navigation要push那個vc
+        guard let dismissedVieController = navigationController.transitionCoordinator?.viewController(forKey: .from),
+              !navigationController.viewControllers.contains(dismissedVieController),
+              let dismissedCoordinator = dismissedVieController.coordinator else {
+            return
+        }
+        print("[DEBUG][NavigationRouter] remove dismissedCoordinator: \(dismissedVieController)")
+        viewController.coordinator?.removeChild(child: dismissedCoordinator)
+
+    }
 }

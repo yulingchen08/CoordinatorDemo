@@ -123,7 +123,7 @@ class CameraViewController: UIViewController {
         super.viewDidLoad()
         setupView()
     }
-    
+        
     override func viewWillAppear(_ animated: Bool) {
         delegate?.printCoordinator()
     }

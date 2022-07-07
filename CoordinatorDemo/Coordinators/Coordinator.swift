@@ -20,6 +20,7 @@ protocol Coordinator: AnyObject {
 extension Coordinator {
     func start() {}
     func removeChild(child: Coordinator) {
+        print("[DEBUG][Coordinator] removeChild")
         child.children.forEach { $0.children.removeAll() }
         for (index, coordinator) in children.enumerated() {
             if coordinator === child {

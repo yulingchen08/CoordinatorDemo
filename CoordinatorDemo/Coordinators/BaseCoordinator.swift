@@ -24,8 +24,8 @@ class BaseCoordinator: Coordinator {
     }
     
     func push(_ viewController: UIViewController, animated: Bool) {
+        viewController.coordinator = self //指定要push的vc中的coordinator
         router.push(viewController, animated: animated)
-        //viewController.coordinator = self
     }
     
     func pop(anmiated: Bool) {
@@ -47,6 +47,7 @@ extension UIViewController {
 
     weak var coordinator: Coordinator? {
         get {
+            //利用objc的objc_getAssociatedObject向一個object給予值，稱為Associated Object，可以將一個值"關聯"到要extension的class上
             objc_getAssociatedObject(self, &CoordinatorAssociatedKeys.ownerKey) as? Coordinator
         }
 
