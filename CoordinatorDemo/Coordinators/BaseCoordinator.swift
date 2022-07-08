@@ -32,10 +32,15 @@ class BaseCoordinator: Coordinator {
         router.pop(animated: anmiated)
     }
     
-    func start() {
+    func start() {}
+    
+    func present(viewController: UIViewController, animated: Bool, completion: (() -> Void)?) {
+        viewController.coordinator = self
+        DispatchQueue.main.async {
+            self.navigater.present(viewController, animated: animated, completion: completion)
+        }
         
     }
-    
     
 }
 
