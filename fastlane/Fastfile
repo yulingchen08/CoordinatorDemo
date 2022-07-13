@@ -1,0 +1,117 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+fastlane_require 'dotenv'
+platform :ios do
+  before_all do |lane|
+    send_msg_to_slack(message: "Start #{lane} lane")
+  end
+
+  desc "Sync all match"
+  desc ""
+  desc "- Sync appstore certificate & provisioning profile by match"
+  desc "- Sync development certificate & provisioning profile by match"
+  lane :sync_all_match do
+    match(type: "appstore" , 
+      app_identifier: "com.yuling.CoordinatorDemo",
+      readonly: true)
+    match(type: "development" , 
+      app_identifier: "com.yuling.CoordinatorDemo",
+      readonly: true)
+  end
+
+  desc "Just build the project"
+  lane :build do
+    check_project_pod
+    build_and_complie
+  end
+
+  desc "upload testflight"
+  lane :upload_testflight do
+    build
+    upload_to_testflight
+  end
+
+
+  def check_project_pod
+    send_msg_to_slack(message: "Start Check Pod")
+    cocoapods(repo_update: false, use_bundle_exec: false)
+    send_msg_to_slack(message: "Finish Check Pod")
+  end
+
+  def build_and_complie
+   # send_msg_to_slack(message: "Start match")
+    #match(
+     # type: 'appstore',
+      #app_identifier: ENV["APP_IDENTIFIER"], 
+      #readonly: true)
+    #send_msg_to_slack(message: "Finish match")
+
+    gym(
+      scheme: "#{ENV["SCHEME_NAME"]}",
+      archive_path: "build/#{ENV["SCHEME_NAME"]}.xcarchive",
+      output_directory: "build/",
+      configuration: "Release",
+      output_name: "#{ENV["SCHEME_NAME"]}"
+      )
+    send_msg_to_slack(message: "Complete Build")
+  end
+
+
+  def upload_to_testflight
+    send_msg_to_slack(message: "Start to upload to TestFlight")
+    api_key = app_store_connect_api_key(
+      key_id: ENV["APP_STORE_CONNECT_KEY_ID"],
+      issuer_id: ENV["APP_STORE_CONNECT_ISSUER_ID"],
+      key_filepath: ENV["APP_STORE_CONNECT_KEY_FILEPATH"],
+      in_house: false
+      )
+
+    pilot(
+      api_key: api_key,
+      app_identifier: ENV["APP_IDENTIFIER"],
+      app_platform: 'ios',
+      ipa: "./build/#{ENV["SCHEME_NAME"]}.ipa",
+      skip_waiting_for_build_processing: true
+      )
+    send_msg_to_slack(message: "Finish to upload to TestFlight")
+  end
+
+  desc "Run unit test on the branch"
+  lane :tests do
+    run_tests(workspace: "CoordinatorDemo.xcworkspace",
+              devices: ["iPhone 13 Pro"],
+              scheme: "CoordinatorDemo",
+              slack_url: "https://hooks.slack.com/services/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",
+              slack_channel: "ios-ci",
+              slack_message: "Automation Test Report 🛠🛠🛠"
+	     )
+  end
+
+  private_lane :send_msg_to_slack do |options|
+    slack(
+      slack_url: "https://hooks.slack.com/services/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", 
+      channel: "ios-ci",
+      success: true,
+      message: options[:message],
+      payload: { 
+        "Build Date 📆" => Time.new.to_s,
+        "Environment 🌍" => "Dev"
+      },
+      default_payloads: [:lane, :git_branch, :test_result, :last_git_commit],
+      )
+  end
+end
